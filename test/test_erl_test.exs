@@ -20,4 +20,12 @@ defmodule TestErlTest do
   test "сломанняя строка" do
     assert "нчобыая) (стр(ока" == TestErl.remove_parentheses("((обы)чн)ая) (стр(ока")
   end
+
+  test "сломанняя строка 2" do
+    assert "обы)чн)ая) (страко" == TestErl.remove_parentheses("обы)чн)ая) (стр(ока)")
+  end
+
+  test "сломанняя строка 3" do
+    assert "обы)чн)ая) (стр(ока" == TestErl.remove_parentheses("обы)чн)ая) (стр(ока")
+  end
 end
